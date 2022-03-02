@@ -4,6 +4,7 @@
     "apps/article-preview-component",
     "apps/chat-app-css-illustration",
     "apps/faq-accordion-card",
+    "apps/fylo-data-storage-component",
     "apps/launch-countdown-timer",
     "apps/rest-countries-api-with-color-theme-switcher",
     "apps/social-media-dashboard-with-theme-switcher"
