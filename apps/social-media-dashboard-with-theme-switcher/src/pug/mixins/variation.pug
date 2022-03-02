@@ -1,0 +1,8 @@
+mixin variation(variation, isPositive, suffix)
+  .variation
+    if isPositive
+      img.variation__arrow(src="./img/icon-up.svg" alt="Positive variation")
+    else
+      img.variation__arrow(src="./img/icon-down.svg" alt="Negative variation")
+
+    p.variation__value(class=isPositive ? "positive" : "negative") #{variation}#{suffix}

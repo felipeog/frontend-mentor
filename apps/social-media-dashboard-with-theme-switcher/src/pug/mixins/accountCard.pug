@@ -1,0 +1,18 @@
+include ./variation.pug
+
+mixin accountCard(provider, title, value, variation, isPositive)
+  article.account-card(class=provider)
+    .user
+      img.user__image(src="./img/icon-" + provider + ".svg" alt=provider)
+
+      h3.user__title= title
+
+    p.account-card__value= value
+
+    case provider
+      when "youtube"
+        p.account-card__metric Subscribers
+      default
+        p.account-card__metric Followers
+
+    +variation(variation, isPositive, " today")

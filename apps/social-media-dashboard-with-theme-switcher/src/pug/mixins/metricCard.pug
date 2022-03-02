@@ -1,0 +1,13 @@
+include ./variation.pug
+
+mixin metricCard(metric, provider, value, variation, isPositive)
+  article.metric-card
+    .metric-card__header
+      h3.metric-card__metric= metric
+
+      img.metric-card__image(src="./img/icon-" + provider + ".svg" alt=provider)
+
+    .metric-card__content
+      p.metric-card__value= value
+
+      +variation(variation, isPositive, "%")

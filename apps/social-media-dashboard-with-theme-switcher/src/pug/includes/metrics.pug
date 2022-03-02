@@ -1,0 +1,17 @@
+include ../mixins/metricCard.pug
+
+section.metrics
+  h2.metrics__title Overview - Today
+
+  .metrics__list
+    +metricCard("Page views", "facebook", 87, 3, false)
+    +metricCard("Likes", "facebook", 52, 2, false)
+
+    +metricCard("Page views", "instagram", 5462, 2257, true)
+    +metricCard("Likes", "instagram", "52k", 1375, true)
+
+    +metricCard("Page views", "twitter", 117, 303, true)
+    +metricCard("Likes", "twitter", 507, 553, true)
+
+    +metricCard("Page views", "youtube", 107, 19, false)
+    +metricCard("Likes", "youtube", 52, 12, false)

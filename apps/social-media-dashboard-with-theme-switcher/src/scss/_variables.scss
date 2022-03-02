@@ -1,0 +1,38 @@
+html[data-theme='dark'] {
+  --text-color: hsl(0, 0%, 100%);
+  --text-muted-color: hsl(228, 34%, 66%);
+  --bg-color: hsl(230, 17%, 14%);
+  --bg-top-color: hsl(232, 19%, 15%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --card-hover-bg-color: hsl(230, 24%, 25%);
+  --toggle-border-color: rgba(255, 255, 255, 0.2);
+}
+
+html[data-theme='light'] {
+  --text-color: hsl(230, 17%, 14%);
+  --text-muted-color: hsl(228, 12%, 44%);
+  --bg-color: hsl(0, 0%, 100%);
+  --bg-top-color: hsl(225, 100%, 98%);
+  --card-bg-color: hsl(227, 47%, 96%);
+  --card-hover-bg-color: hsl(230, 30%, 85%);
+  --toggle-border-color: rgba(0, 0, 0, 0.2);
+}
+
+$text-color: var(--text-color);
+$text-muted-color: var(--text-muted-color);
+$bg-color: var(--bg-color);
+$bg-top-color: var(--bg-top-color);
+$card-bg-color: var(--card-bg-color);
+$card-hover-bg-color: var(--card-hover-bg-color);
+$text-positive-color: hsl(163, 72%, 41%);
+$text-negative-color: hsl(356, 69%, 56%);
+$toggle-bg-color: $text-muted-color;
+$toggle-bg-gradient: linear-gradient(
+  90deg,
+  hsl(210, 78%, 56%),
+  hsl(146, 68%, 55%)
+);
+$toggle-border-color: var(--toggle-border-color);
+
+$transition-duration: 200ms;
+$border-radius: 0.4rem;
