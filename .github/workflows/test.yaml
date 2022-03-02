@@ -19,9 +19,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Install dependencies
-        run: |
-          cd ${{ env.working-directory }}
-          npm ci
+        run: npm ci
       - run: |
           cd ${{ env.working-directory }}
           npm test
