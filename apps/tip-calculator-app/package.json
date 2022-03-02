@@ -1,5 +1,6 @@
 {
   "name": "tip-calculator-app",
+  "version": "1.0.0",
   "scripts": {
     "start": "parcel --no-cache",
     "build": "parcel build",
