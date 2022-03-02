@@ -1,0 +1,9 @@
+{
+  "name": "rock-paper-scissors-game",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

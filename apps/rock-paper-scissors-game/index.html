@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <section class="score">
+        <h1 class="hidden">Score</h1>
+
+        <img
+          class="score__logo"
+          src="./img/logo.svg"
+          alt="Rock Paper Sissors logo"
+        />
+        <div class="score__count">
+          <p class="score__text">Score</p>
+          <p class="score__number">---</p>
+        </div>
+      </section>
+
+      <section class="sections">
+        <div class="section section--1 section--active">
+          <div class="hand hand--rock" data-hand="rock">
+            <img
+              class="hand__image"
+              src="./img/icon-rock.svg"
+              alt="Rock hand"
+            />
+          </div>
+          <div class="hand hand--paper" data-hand="paper">
+            <img
+              class="hand__image"
+              src="./img/icon-paper.svg"
+              alt="Paper hand"
+            />
+          </div>
+          <div class="hand hand--scissors" data-hand="scissors">
+            <img
+              class="hand__image"
+              src="./img/icon-scissors.svg"
+              alt="Scissors hand"
+            />
+          </div>
+        </div>
+
+        <div class="section section--2">
+          <div class="picked picked--player">
+            <h2 class="picked__title">You picked</h2>
+            <div class="hand hand--result">
+              <img
+                class="hand__image"
+                src="./img/icon-rock.svg"
+                alt="Player hand"
+              />
+            </div>
+          </div>
+
+          <div class="result">
+            <h2 class="result__title">---</h2>
+            <button class="result__play-again">Play again</button>
+          </div>
+
+          <div class="picked picked--house">
+            <h2 class="picked__title">The house picked</h2>
+            <div class="hand hand--result">
+              <img
+                class="hand__image"
+                src="./img/icon-rock.svg"
+                alt="House hand"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button class="open-rules">Rules</button>
+    </main>
+
+    <div class="rules-modal">
+      <section class="rules">
+        <header class="rules__header">
+          <h1 class="rules__title">Rules</h1>
+          <img
+            class="rules__close"
+            src="./img/icon-close.svg"
+            alt="Close modal"
+          />
+        </header>
+
+        <img
+          class="rules__image"
+          src="./img/image-rules.svg"
+          alt="Game rules"
+        />
+      </section>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
