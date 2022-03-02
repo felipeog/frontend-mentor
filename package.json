@@ -6,9 +6,10 @@
     "apps/faq-accordion-card",
     "apps/fylo-data-storage-component",
     "apps/huddle-landing-page-with-a-single-introductory-section",
+    "apps/ip-address-tracker",
+    "apps/job-listings-with-filtering",
     "apps/launch-countdown-timer",
     "apps/rest-countries-api-with-color-theme-switcher",
-    "apps/social-media-dashboard-with-theme-switcher",
-    "apps/ip-address-tracker"
+    "apps/social-media-dashboard-with-theme-switcher"
   ]
 }

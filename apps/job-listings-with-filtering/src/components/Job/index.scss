@@ -1,0 +1,94 @@
+@import '../../scss/variables';
+
+.Job {
+  display: flex;
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: 2rem;
+
+  &__company {
+    color: $primary;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  &__is-new,
+  &__is-featured {
+    border-radius: 99rem;
+    padding: 0.4rem 0.6rem 0.2rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.4rem;
+  }
+
+  &__is-new {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &__is-featured {
+    background-color: $secondary-dark;
+    color: #fff;
+  }
+
+  &__position {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 100ms;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__meta {
+    color: $primary;
+    font-size: 0.9rem;
+  }
+
+  &.Job--is-featured {
+    box-shadow: $box-shadow, 4.4rem 0 0 -4rem $primary inset;
+  }
+}
+
+@media screen and (min-width: 1060px) {
+  .Job {
+    align-items: center;
+
+    &__logo {
+      margin-right: 2em;
+    }
+
+    .TabletList {
+      margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .Job {
+    flex-direction: column;
+    margin-top: 3rem;
+
+    &__logo {
+      margin-top: -4em;
+    }
+
+    &__image {
+      width: 4rem;
+    }
+
+    &__content {
+      margin: 1rem 0;
+    }
+
+    .TabletList {
+      border-top: 0.1rem solid $primary;
+      padding-top: 1rem;
+    }
+  }
+}
