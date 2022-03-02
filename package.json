@@ -1,6 +1,7 @@
 {
   "name": "frontend-mentor",
   "workspaces": [
+    "apps/3-column-preview-card-component",
     "apps/article-preview-component",
     "apps/chat-app-css-illustration",
     "apps/faq-accordion-card",

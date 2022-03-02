@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+
+.Button {
+  background-color: $color-bg-button;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 100px;
+  font-family: $font-text;
+  cursor: pointer;
+  color: currentColor;
+  text-transform: capitalize;
+  transition: $duration-transition background-color, $duration-transition color;
+
+  &:hover {
+    color: $color-text;
+    background-color: transparent;
+    border: 2px solid $color-bg-button;
+    padding: 12px 28px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px invert($color-bg-button);
+  }
+}
