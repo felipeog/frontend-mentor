@@ -1,0 +1,15 @@
+{
+  "name": "article-preview-component",
+  "scripts": {
+    "dev": "parcel ./src/pug/index.pug",
+    "build": "parcel build ./src/pug/index.pug",
+    "prettier": "prettier --write \"./**/*.{pug,scss,js,json}\""
+  },
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.10.1",
+    "parcel": "^1.12.3",
+    "prettier": "^2.1.2",
+    "pug": "^3.0.0",
+    "sass": "^1.29.0"
+  }
+}

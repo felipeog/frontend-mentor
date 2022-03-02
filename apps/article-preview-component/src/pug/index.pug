@@ -1,0 +1,51 @@
+extends ./_views/layout.pug
+
+block title
+  title Frontend Mentor | Article preview component
+
+block content
+  .wrapper
+    main.article
+      img.article__image(src='../img/drawers.jpg', alt='Drawers')
+
+      article.article__content
+        h1.article__title Shift the overall look and feel by adding these wonderful touches to furniture in your home
+
+        p.article__text Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+
+        .author
+          img.author__avatar(
+            src='../img/avatar-michelle.jpg',
+            alt='Michelle Appleton'
+          )
+
+          .author__data
+            p.author__name Michelle Appleton
+
+            p.author__date 28 Jun 2020
+
+          .share
+            .share__button
+              img.share__button-image(
+                src='../img/icon-share.svg',
+                alt='Share button'
+              )
+
+            .share__tooltip
+              p.share__text Share
+
+              ul.share__social-list
+                li.share__social-item
+                  img.share__icon(
+                    src='../img/icon-facebook.svg',
+                    alt='Facebook'
+                  )
+
+                li.share__social-item
+                  img.share__icon(src='../img/icon-twitter.svg', alt='Twitter')
+
+                li.share__social-item
+                  img.share__icon(
+                    src='../img/icon-pinterest.svg',
+                    alt='Pinterest'
+                  )
