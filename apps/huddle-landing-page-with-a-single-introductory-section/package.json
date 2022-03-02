@@ -1,0 +1,9 @@
+{
+  "name": "huddle-landing-page-with-a-single-introductory-section",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
