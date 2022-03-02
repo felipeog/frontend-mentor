@@ -30,8 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: apps/tip-calculator-app
-    with:
-      working-directory: ${{ env.working-directory }}
     steps:
       - uses: actions/checkout@v1
       - uses: ArtiomTr/jest-coverage-report-action@v2
+        with:
+          working-directory: ${{ env.working-directory }}
