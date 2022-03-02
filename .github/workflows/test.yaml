@@ -1,6 +1,7 @@
 name: "Tip calculator app: Test"
 
 on:
+  workflow_dispatch: {}
   pull_request:
     branches: [main]
     paths:
