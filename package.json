@@ -17,6 +17,7 @@
     "apps/room-homepage",
     "apps/social-media-dashboard-with-theme-switcher",
     "apps/social-proof-section",
-    "apps/testimonials-grid-section"
+    "apps/testimonials-grid-section",
+    "apps/tip-calculator-app"
   ]
 }

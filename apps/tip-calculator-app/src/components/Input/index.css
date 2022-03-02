@@ -1,0 +1,44 @@
+.Input {
+  font-size: 0.6rem;
+  color: var(--dark_grayish_cyan1);
+}
+
+.Input__label {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.Input__input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 0.4rem;
+  border: 0.09rem solid transparent;
+  border-radius: 0.2rem;
+  background-color: var(--light_grayish_cyan2);
+}
+
+.Input__input-container:focus-within {
+  border-color: var(--dark_grayish_cyan2);
+}
+
+.Input__icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.Input__input {
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: var(--bold_weight);
+  border: none;
+  outline: none;
+  text-align: right;
+  background-color: transparent;
+}
+
+.Input__input::-webkit-outer-spin-button,
+.Input__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
