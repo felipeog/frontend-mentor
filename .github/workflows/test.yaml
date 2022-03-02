@@ -1,8 +1,10 @@
-name: Test
+name: "Tip calculator app: Test"
 
 on:
   pull_request:
     branches: [main]
+    paths:
+      - "apps/tip-calculator-app/**"
 
 jobs:
   test:

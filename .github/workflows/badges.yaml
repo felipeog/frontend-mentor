@@ -1,8 +1,10 @@
-name: Badges
+name: "Tip calculator app: Badges"
 
 on:
   push:
     branches: [main]
+    paths:
+      - "apps/tip-calculator-app/**"
 
 jobs:
   badges:
