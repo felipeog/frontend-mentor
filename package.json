@@ -8,6 +8,7 @@
     "apps/huddle-landing-page-with-a-single-introductory-section",
     "apps/launch-countdown-timer",
     "apps/rest-countries-api-with-color-theme-switcher",
-    "apps/social-media-dashboard-with-theme-switcher"
+    "apps/social-media-dashboard-with-theme-switcher",
+    "apps/ip-address-tracker"
   ]
 }

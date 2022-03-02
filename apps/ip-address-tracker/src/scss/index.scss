@@ -1,0 +1,181 @@
+@import './reset';
+@import './variables';
+@import './helpers';
+
+// base
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+input,
+button {
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+// blocks and elements
+.wrapper {
+  min-height: 100vh;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  height: 14rem;
+  background-image: url(../img/pattern-bg.png);
+  background-size: cover;
+  color: #fff;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 1.4rem;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    border: none;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    background: #000;
+    cursor: pointer;
+    transition: 200ms background;
+
+    &:hover {
+      background: $very-dark-gray;
+    }
+  }
+
+  &__icon {
+    width: 0.4rem;
+  }
+}
+
+.content {
+  margin: 0 auto;
+  background: #fff;
+  color: #000;
+  border-radius: $border-radius;
+  padding: 1.4rem 0;
+  position: relative;
+  z-index: 600;
+  line-height: 1.4;
+  font-weight: 500;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.14);
+
+  &__data {
+    padding: 0 1.4rem;
+  }
+
+  &__data + &__data {
+    border-left: 0.1rem solid #e6e6e6;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    color: $dark-gray;
+  }
+
+  &__isp {
+    word-break: break-word;
+  }
+}
+
+.bottom {
+  height: calc(100vh - 14rem);
+}
+
+#map {
+  height: 100%;
+}
+
+// desktop
+@media screen and (min-width: 1000px) {
+  .search {
+    &__form {
+      min-width: 26rem;
+    }
+
+    &__input {
+      flex-grow: 1;
+      padding: 1rem 1.4rem;
+    }
+
+    &__button {
+      padding: 1rem 1.4rem;
+    }
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 12rem));
+
+    &__data {
+      padding: 0 1.4rem;
+    }
+
+    &__data + &__data {
+      border-left: 0.1rem solid #e6e6e6;
+    }
+
+    &__title {
+      margin-bottom: 0.8rem;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 999px) {
+  .search {
+    &__form {
+      width: 280px;
+    }
+
+    &__input {
+      padding: 0.8rem 1rem;
+      width: 80%;
+    }
+
+    &__button {
+      padding: 0.8rem 1rem;
+      width: 20%;
+    }
+  }
+
+  .content {
+    text-align: center;
+    width: 280px;
+
+    &__data + &__data {
+      margin-top: 1rem;
+    }
+
+    &__title {
+      margin-bottom: 0.2rem;
+    }
+  }
+}
