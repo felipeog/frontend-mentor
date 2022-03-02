@@ -1,8 +1,0 @@
-coverage/lcov-report
-coverage/lcov.info
-coverage/coverage-summary.json
-dist
-node_modules
-
-.DS_Store
-.parcel-cache
