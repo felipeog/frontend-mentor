@@ -10,8 +10,9 @@
     "apps/ip-address-tracker",
     "apps/job-listings-with-filtering",
     "apps/launch-countdown-timer",
+    "apps/pricing-component-with-toggle",
+    "apps/qr-code-component",
     "apps/rest-countries-api-with-color-theme-switcher",
-    "apps/social-media-dashboard-with-theme-switcher",
-    "apps/pricing-component-with-toggle"
+    "apps/social-media-dashboard-with-theme-switcher"
   ]
 }

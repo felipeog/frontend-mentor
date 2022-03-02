@@ -1,0 +1,9 @@
+{
+  "name": "qr-code-component",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
