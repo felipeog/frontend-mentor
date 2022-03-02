@@ -1,0 +1,6 @@
+{
+  "name": "frontend-mentor",
+  "workspaces": [
+    "apps/faq-accordion-card"
+  ]
+}
