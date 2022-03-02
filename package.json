@@ -4,6 +4,7 @@
     "apps/faq-accordion-card",
     "apps/article-preview-component",
     "apps/chat-app-css-illustration",
-    "apps/launch-countdown-timer"
+    "apps/launch-countdown-timer",
+    "apps/rest-countries-api-with-color-theme-switcher"
   ]
 }
