@@ -1,0 +1,10 @@
+mixin testimonial(imgSrc, name, text)
+  article.testimonial
+    header.testimonial__header
+      img.testimonial__image(src=imgSrc alt=name)
+
+      .testimonial__meta
+        h2.testimonial__name= name
+        p.testimonial__badge Verified Buyer
+
+    q.testimonial__text "#{text}"

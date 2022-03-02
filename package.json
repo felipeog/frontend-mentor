@@ -15,6 +15,7 @@
     "apps/rest-countries-api-with-color-theme-switcher",
     "apps/social-media-dashboard-with-theme-switcher",
     "apps/rock-paper-scissors-game",
-    "apps/room-homepage"
+    "apps/room-homepage",
+    "apps/social-proof-section"
   ]
 }
