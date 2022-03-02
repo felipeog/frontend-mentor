@@ -10,6 +10,8 @@ on:
 jobs:
   badges:
     runs-on: ubuntu-latest
+    env:
+      working-directory: apps/tip-calculator-app
     steps:
       - uses: actions/checkout@v2
         with:
@@ -19,9 +21,12 @@ jobs:
         with:
           node-version: 14.x
       - name: Install dependencies
-        run: npm ci
+        run: |
+          cd ${{ env.working-directory }}
+          npm ci
       - name: Commit badges
         run: |
+          cd ${{ env.working-directory }}
           npm run test:badges
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git config user.name "$GITHUB_ACTOR"

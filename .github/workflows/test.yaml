@@ -10,6 +10,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      working-directory: apps/tip-calculator-app
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -17,11 +19,19 @@ jobs:
         with:
           node-version: 14.x
       - name: Install dependencies
-        run: npm ci
-      - run: npm test
+        run: |
+          cd ${{ env.working-directory }}
+          npm ci
+      - run: |
+          cd ${{ env.working-directory }}
+          npm test
 
   coverage:
     runs-on: ubuntu-latest
+    env:
+      working-directory: apps/tip-calculator-app
+    with:
+      working-directory: ${{ env.working-directory }}
     steps:
       - uses: actions/checkout@v1
       - uses: ArtiomTr/jest-coverage-report-action@v2
