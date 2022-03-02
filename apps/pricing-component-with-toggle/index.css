@@ -1,0 +1,326 @@
+/* ==========
+general styles
+========== */
+:root {
+  --font-size: 15px;
+  --font-family: Montserrat, sans-serif;
+  --transition-duration: 200ms;
+  --card-border-radius: 0.8rem;
+  --button-border-radius: 0.4rem;
+
+  /* colors */
+  --primary: hsl(237, 63%, 64%);
+  --white: #fff;
+  --app-bg-color: hsl(240, 78%, 98%);
+  --title-color: hsl(233, 13%, 49%);
+  --action-text-color: hsl(234, 14%, 74%);
+  --price-color: hsl(232, 13%, 33%);
+  --border-color: hsl(0, 0%, 85%);
+  --gradient: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+
+body {
+  background-color: var(--app-bg-color);
+}
+
+/* resets */
+h1,
+h2 {
+  margin: 0;
+}
+
+button {
+  border: none;
+  font-family: var(--font-family);
+  background-color: unset;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:active,
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==========
+app layout
+========== */
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url(./img/bg-top.svg), url(./img/bg-bottom.svg);
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+/* header block */
+.header__title {
+  color: var(--title-color);
+  text-align: center;
+}
+
+/* actions block */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.6rem;
+}
+
+.actions__button {
+  color: var(--action-text-color);
+  font-weight: bold;
+  transition: var(--transition-duration);
+}
+
+.actions__button:hover {
+  filter: brightness(80%);
+}
+
+.actions__toggle {
+  position: relative;
+  margin: 0 1.4rem;
+  width: 3.4rem;
+  height: 2rem;
+  border-radius: 999rem;
+  background: var(--gradient);
+  transition: var(--transition-duration);
+}
+
+.actions__toggle:hover {
+  filter: brightness(120%);
+}
+
+.actions__toggle::before {
+  position: absolute;
+  content: '';
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 1.6rem;
+  height: 1.6rem;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: var(--transition-duration);
+}
+
+/* pricing block */
+.pricing {
+  margin-top: 3rem;
+}
+
+.pricing__card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--card-border-radius);
+  text-align: center;
+}
+
+.pricing__title {
+  font-size: var(--font-size);
+  color: var(--title-color);
+}
+
+/* price block */
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.8rem;
+}
+
+.price__value,
+.price__sign {
+  font-weight: bold;
+  color: var(--price-color);
+  margin-right: 0.4rem;
+}
+
+/* feats block */
+.feats__item {
+  padding: 1rem;
+  border-bottom: 0.1rem solid var(--border-color);
+  color: var(--title-color);
+  font-weight: bold;
+}
+
+.feats__item:first-child {
+  border-top: 0.1rem solid var(--border-color);
+}
+
+.feats__cta {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 1rem;
+  color: var(--white);
+  border-radius: var(--button-border-radius);
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  transition: box-shadow var(--transition-duration);
+}
+
+.feats__cta::before {
+  position: absolute;
+  z-index: -10;
+  content: '';
+  display: block;
+  background: var(--gradient);
+  border-radius: var(--button-border-radius);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: var(--transition-duration);
+  opacity: 1;
+}
+
+.feats__cta:hover {
+  color: var(--primary);
+  box-shadow: inset 0 0 0 0.1rem var(--primary);
+}
+
+.feats__cta:hover::before {
+  opacity: 0;
+}
+
+/* ==========
+modifiers
+========== */
+.actions__toggle--active.actions__toggle::before {
+  left: 1.6rem;
+}
+
+.pricing__card--featured {
+  background: var(--gradient);
+}
+
+.pricing__card--featured .pricing__title {
+  color: var(--white);
+}
+
+.pricing__card--featured .price__sign,
+.pricing__card--featured .price__value {
+  color: var(--white);
+}
+
+.pricing__card--featured .feats__item {
+  border-bottom: 0.1rem solid var(--border-color);
+  color: var(--white);
+}
+
+.pricing__card--featured .feats__item:first-child {
+  border-top: 0.1rem solid var(--border-color);
+}
+
+.pricing__card--featured .feats__cta {
+  background-color: var(--white);
+  color: var(--primary);
+  transition: background-color var(--transition-duration);
+}
+
+.pricing__card--featured .feats__cta::before {
+  content: unset;
+}
+
+.pricing__card--featured .feats__cta:hover {
+  background-color: transparent;
+  color: var(--white);
+  box-shadow: inset 0 0 0 0.1rem var(--white);
+}
+
+/* ==========
+media queries
+========== */
+/* desktop */
+@media screen and (min-width: 1200px) {
+  .pricing {
+    display: flex;
+    align-items: center;
+  }
+
+  .pricing__card {
+    width: 23rem;
+    position: relative;
+  }
+
+  .pricing__card--left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 10;
+    box-shadow: -0.6rem 1rem 04em var(--box-shadow-color);
+  }
+
+  .pricing__card--featured {
+    padding-top: 3.4rem;
+    padding-bottom: 3.4rem;
+    box-shadow: 0 1rem 4rem var(--box-shadow-color);
+  }
+
+  .pricing__card--right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 10;
+    box-shadow: 0.6rem 1rem 4rem var(--box-shadow-color);
+  }
+
+  .price__sign {
+    font-size: 2.4rem;
+  }
+
+  .price__value {
+    font-size: 4rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 1199px) {
+  .pricing__card {
+    width: 18.2rem;
+    box-shadow: 0 1rem 4rem var(--box-shadow-color);
+  }
+
+  .pricing__card + .pricing__card {
+    margin-top: 2rem;
+  }
+
+  .price__sign {
+    font-size: 1.6rem;
+  }
+
+  .price__value {
+    font-size: 3.4rem;
+  }
+}

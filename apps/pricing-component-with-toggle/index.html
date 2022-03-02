@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Pricing Toggle</title>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <main x-data="pricing()" x-init="() => init($refs)" class="container">
+        <header class="header">
+          <h1 class="header__title">Our Pricing</h1>
+
+          <div class="actions">
+            <button @click="setToAnnualyPlan($refs)" class="actions__button">
+              Annualy
+            </button>
+
+            <button
+              @click="togglePlan($refs)"
+              class="actions__toggle"
+              :class="{ 'actions__toggle--active' : isMonthly() }"
+            ></button>
+
+            <button @click="setToMonthlyPlan($refs)" class="actions__button">
+              Monthly
+            </button>
+          </div>
+        </header>
+
+        <section class="pricing">
+          <template x-for="(plan, index) in plans" :key="plan">
+            <article
+              class="pricing__card"
+              :class="{
+                'pricing__card--left' : index === 0,
+                'pricing__card--featured' : index === 1,
+                'pricing__card--right' : index === 2
+              }"
+            >
+              <h2 x-text="plan.title" class="pricing__title"></h2>
+
+              <p class="price">
+                <span class="price__sign">$</span>
+                <span :x-ref="plan.title" class="price__value"></span>
+              </p>
+
+              <ul class="feats">
+                <li
+                  x-text="[ `${plan.features.storage} Storage` ]"
+                  class="feats__item"
+                ></li>
+                <li
+                  x-text="[ `${plan.features.users} User${plan.features.users === 1 ? '' : 's' } Allowed` ]"
+                  class="feats__item"
+                ></li>
+                <li
+                  x-text="[ `Send up to ${plan.features.upload}` ]"
+                  class="feats__item"
+                ></li>
+              </ul>
+
+              <button class="feats__cta">Learn more</button>
+            </article>
+          </template>
+        </section>
+      </main>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
