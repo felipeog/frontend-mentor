@@ -2,7 +2,7 @@
 
 ## Live demo
 
-https://fm-todoapp.vercel.app/
+https://felipeog-fm-todo-app.netlify.app
 
 ## How to run
 
