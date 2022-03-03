@@ -1,0 +1,21 @@
+@use './assets/scss/variables' as v;
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 540px;
+    padding: 6rem 2rem;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .root {
+    .container {
+      width: 320px;
+      padding: 4rem 1rem;
+    }
+  }
+}

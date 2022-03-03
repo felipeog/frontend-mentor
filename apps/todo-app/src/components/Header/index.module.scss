@@ -1,0 +1,35 @@
+@use '../../assets/scss/variables' as v;
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  .title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8rem;
+    padding-top: 0.5rem;
+    color: v.$white;
+  }
+
+  .button {
+    cursor: pointer;
+
+    .sunIcon,
+    .moonIcon {
+      transition: v.$transition-duration;
+    }
+
+    &:hover {
+      .sunIcon {
+        transform: rotate(45deg);
+      }
+
+      .moonIcon {
+        transform: rotate(-20deg);
+      }
+    }
+  }
+}

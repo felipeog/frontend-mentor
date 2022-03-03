@@ -1,0 +1,81 @@
+@use '../../assets/scss/variables' as v;
+
+.root {
+  .top,
+  .bottom {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: v.$item-bg-color;
+  }
+
+  .top {
+    justify-content: space-between;
+    border-bottom-left-radius: v.$border-radius;
+    border-bottom-right-radius: v.$border-radius;
+    border-top: 0.1rem solid v.$item-border-color;
+  }
+
+  .bottom {
+    justify-content: center;
+    margin-top: 1.4rem;
+    border-radius: v.$border-radius;
+  }
+
+  .itemsLeft,
+  .actionButton,
+  .clearCompleted {
+    font-size: 0.8rem;
+    color: v.$action-text-color;
+  }
+
+  .actionButton,
+  .clearCompleted {
+    cursor: pointer;
+    transition: v.$transition-duration;
+
+    &:hover {
+      color: v.$text-color;
+    }
+  }
+
+  .actionsListDesktop,
+  .actionsListMobile {
+    display: flex;
+  }
+
+  .bottom {
+    display: none;
+  }
+
+  .actionItem {
+    font-weight: bold;
+
+    + .actionItem {
+      margin-left: 0.6rem;
+    }
+  }
+
+  .actionButton.active {
+    color: v.$action-text-active-color;
+  }
+
+  .message {
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: v.$dark-grayish-blue;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .root {
+    .actionsListDesktop {
+      display: none;
+    }
+
+    .bottom {
+      display: flex;
+    }
+  }
+}
